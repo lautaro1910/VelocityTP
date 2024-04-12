@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convertidor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Convertidor de Longitud</h2>
+        <form method="get">
+            <div class="form-group mt-4">
+                <label for="valor">Ingrese el valor:</label>
+                <input type="text" class="form-control" id="valor" name="valor">
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <button class="btn btn-primary btn-lg btn-block" formaction="/getMaKM">Convertir metro a km</button>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <button class="btn btn-primary btn-lg btn-block" formaction="/getKMaM">Convertir km a m</button>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <button class="btn btn-primary btn-lg btn-block" formaction="/getCMaM">Convertir cm a m</button>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <button class="btn btn-primary btn-lg btn-block" formaction="/getMaCM">Convertir m a cm</button>
+                </div>
+            </div>
+        </form>
+        <div class="container mt-5">
+            <h2>El resultado de la conversión de $accion del $valor es:</h2>
+            <p>Resultado: $resultado</p>
+        </div>
+        <a href="/getInfo" class="btn btn-info mt-3">Volver al menú principal</a>
+    </div>
+</body>
+</html>

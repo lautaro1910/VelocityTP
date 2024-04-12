@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grido</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Color de fondo */
+            padding: 20px; /* Añadir espacio alrededor del contenido */
+        }
+        .container {
+            max-width: 600px; /* Ancho máximo del contenedor */
+            margin: 0 auto; /* Centrar el contenedor */
+            background-color: #ffffff; /* Color de fondo del contenedor */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 30px; /* Espaciado interno */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+        .form-label {
+            font-weight: bold; /* Texto en negrita */
+            color: #007bff; /* Color azul */
+        }
+        .form-group {
+            margin-bottom: 20px; /* Margen inferior */
+        }
+        .btn-submit {
+            width: 100%; /* Ancho completo */
+        }
+        .product-list {
+            list-style-type: none; /* Eliminar viñetas */
+            padding-left: 0; /* Eliminar espacio en la lista ordenada */
+        }
+        .product-item {
+            margin-bottom: 15px; /* Margen inferior */
+            background-color: #f8f9fa; /* Color de fondo */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+        .product-name {
+            font-weight: bold; /* Texto en negrita */
+            color: #28a745; /* Color verde */
+            margin-bottom: 5px; /* Margen inferior */
+        }
+        .product-points {
+            color: #007bff; /* Color azul */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">Servicio de puntos GRIDO</h2>
+        <form action="/getResultado" method="get">
+            <div class="form-group">
+                <label for="nombre" class="form-label">Ingrese su nombre:</label>
+                <input type="text" class="form-control" name="nombre" id="nombre">
+            </div>
+            <div class="form-group">
+                <label for="puntos" class="form-label">Ingrese sus puntos:</label>
+                <input type="text" class="form-control" name="puntos" id="puntos">
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">Obtener cuales puedo comprar</button>
+        </form>
+        <h3 class="mt-5">Lista de productos de GRIDO puntos</h3>
+        <ul class="product-list">
+            #foreach($producto in $resultado)
+                <li class="product-item">
+                    <p class="product-name">$producto.getNombre()</p>
+                    <p class="product-points">Puntos requeridos: $producto.getPuntosRequeridos()</p>
+                </li>
+            #end
+        </ul>
+    </div>
+</body>
+</html>

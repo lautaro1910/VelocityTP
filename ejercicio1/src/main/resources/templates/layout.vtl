@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ordenar o desordenar numeros</title>
+    </head>
+    <body>
+        <h2>Ingresar Numeros (solo 7)</h2>
+        <form>
+            <input type="text" id="numero">
+            <button type="button" onclick="agregarNumero()">Agregar Numero</button>
+        </form>
+        <h2>Acciones</h2>
+        <a href="/getNumerosOrdenados">Ordenar Numeros</a><br>
+        <a href="/getNumerosDesordenados">Desordenar Numeros</a><br>
+        <h2>Numeros Ingresados:
+        </h2>
+        #if($numeros.size() == 0)
+            <p>Aun no se ingresaron numeros</p>
+        #else
+            <p>(cantidad total = $numeros.size())</p>
+            ## imprimo los numeros ingresados
+            #foreach($numero in $numeros) $numero
+                <br>
+            #end
+        #end
+        <br><br>
+
+        <script>
+            function agregarNumero() {
+                var numero = document
+                    .getElementById("numero")
+                    .value;
+                window.location.href = "/agregar?numero=" + numero;
+                ##agregar / numero = VALOR
+            }
+        </script>
+    </body>
+</html>

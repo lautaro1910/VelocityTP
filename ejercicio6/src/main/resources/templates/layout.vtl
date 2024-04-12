@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Convertidor</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Color de fondo */
+            padding: 50px; /* Añadir espacio alrededor del contenido */
+        }
+        .container {
+            background-color: #ffffff; /* Color de fondo del contenedor */
+            border-radius: 10px; /* Borde redondeado */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+            padding: 30px; /* Añadir espacio interno al contenedor */
+            max-width: 400px; /* Ancho máximo del contenedor */
+            margin: 0 auto; /* Centrar el contenedor horizontalmente */
+        }
+        h2 {
+            text-align: center; /* Centrar el título */
+            margin-bottom: 30px; /* Margen inferior para separarlo de los botones */
+        }
+        form {
+            display: flex;
+            flex-direction: column; /* Mostrar los botones en una columna */
+            align-items: center; /* Centrar los botones horizontalmente */
+        }
+        button {
+            width: 300px; /* Ancho de los botones */
+            margin-bottom: 20px; /* Margen inferior entre los botones */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Seleccionar Convertidor</h2>
+        <form method="get">
+            <button class="btn btn-primary btn-lg" formaction="/convertidorPeso">Convertidor de Peso</button>
+            <button class="btn btn-primary btn-lg" formaction="/convertidorTemperatura">Convertidor de Temperatura</button>
+            <button class="btn btn-primary btn-lg" formaction="/convertidorLongitud">Convertidor de Longitud</button>
+        </form>
+    </div>
+</body>
+</html>

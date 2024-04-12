@@ -1,0 +1,8 @@
+spark/template/velocity/VelocityTemplateEngine.class
+com/mycompany/ejercicio1/Ejercicio2.class
+Main.class
+modelo/UsuarioDAO.class
+modelo/Producto.class
+modelo/ProductoDAO.class
+modelo/Usuario.class
+controlador/Controller.class

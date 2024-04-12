@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grido puntos</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Color de fondo */
+            padding: 20px; /* Añadir espacio alrededor del contenido */
+        }
+        .container {
+            max-width: 600px; /* Ancho máximo del contenedor */
+            margin: 0 auto; /* Centrar el contenedor */
+            background-color: #ffffff; /* Color de fondo del contenedor */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 30px; /* Espaciado interno */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+        .welcome-heading {
+            color: #007bff; /* Color azul */
+            text-align: center; /* Centrar el texto */
+            margin-bottom: 30px; /* Margen inferior */
+        }
+        .points-info {
+            text-align: center; /* Centrar el texto */
+            margin-bottom: 40px; /* Margen inferior */
+        }
+        .product-item {
+            background-color: #f8f9fa; /* Color de fondo */
+            padding: 15px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados */
+            margin-bottom: 15px; /* Margen inferior */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+        .product-name {
+            font-weight: bold; /* Texto en negrita */
+            color: #28a745; /* Color verde */
+            margin-bottom: 5px; /* Margen inferior */
+        }
+        .product-points {
+            color: #007bff; /* Color azul */
+        }
+        .no-points-message {
+            color: #dc3545; /* Color rojo */
+            text-align: center; /* Centrar el texto */
+            margin-top: 20px; /* Margen superior */
+        }
+        .btn-back {
+            display: block; /* Mostrar como bloque */
+            width: 100%; /* Ancho completo */
+            text-align: center; /* Centrar el texto */
+            margin-top: 20px; /* Margen superior */
+            text-decoration: none; /* Sin subrayado */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="welcome-heading">¡Bienvenido, $nombre!</h2>
+        <div class="points-info">
+            <p class="mb-0">Usted posee <strong>$puntos puntos</strong>.</p>
+        </div>
+        
+        #if(!$resultado.isEmpty())
+            <h3>Lista de productos disponibles para usted:</h3>
+            #foreach($producto in $resultado)
+                <div class="product-item">
+                    <p class="product-name">$producto.getNombre()</p>
+                    <p class="product-points">Puntos requeridos: $producto.getPuntosRequeridos()</p>
+                </div>
+            #end
+        #else
+            <p class="no-points-message">Lo sentimos, pero no tiene suficientes puntos para canjear productos en este momento.</p>
+        #end
+        <a href="/getInfo" class="btn btn-primary btn-back">Volver al menú principal</a>
+    </div>
+</body>
+</html>

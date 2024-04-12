@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora</h2>
+        <form method="get">
+            <div class="form-group">
+                <label for="num1">Ingrese el primer número:</label>
+                <input type="text" class="form-control" name="num1" id="num1">
+            </div>
+            <div class="form-group">
+                <label for="num2">Ingrese el segundo número:</label>
+                <input type="text" class="form-control" name="num2" id="num2">
+            </div>
+            <button formaction="/getSuma" type="submit" class="btn btn-primary">Sumar</button>
+            <button formaction="/getResta" type="submit" class="btn btn-primary">Restar</button>
+            <button formaction="/getMultiplicacion" type="submit" class="btn btn-primary">Multiplicar</button>
+            <button formaction="/getDivision" type="submit" class="btn btn-primary">Dividir</button>
+        </form>
+    </div>
+</body>
+</html>

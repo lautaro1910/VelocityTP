@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operaciones de Familia</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group label {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .btn-primary:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+        }
+        .btn-block {
+            width: 100%;
+        }
+        .person-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .person-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            border: 1px solid #007bff;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card mt-5">
+            <div class="card-header text-center">
+                <h2 class="mb-0">Operaciones de Familia</h2>
+            </div>
+            <div class="card-body">
+                <form method="get">
+                    <div class="form-group">
+                        <label for="nombre">Ingrese su nombre:</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre">
+                    </div>
+                    <h3 class="mt-4 mb-3">Seleccionar Operación</h3>
+                    <div class="btn-group-vertical d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary btn-block" formaction="/getHijos">Obtener hijos</button>
+                        <button type="submit" class="btn btn-primary btn-block" formaction="/getHermanos">Obtener hermanos</button>
+                        <button type="submit" class="btn btn-primary btn-block" formaction="/getNietos">Obtener nietos</button>
+                        <button type="submit" class="btn btn-primary btn-block" formaction="/getPadre">Obtener padres</button>
+                        <button type="submit" class="btn btn-primary btn-block" formaction="/getSobrinos">Obtener sobrinos</button>
+                        <button type="submit" class="btn btn-primary btn-block" formaction="/getTios">Obtener tíos</button>
+                        <button type="submit" class="btn btn-primary btn-block" formaction="/getPersonas">Obtener todas las Personas</button>
+                    </div>
+                </form>
+                <h2 class="mt-5 mb-3">Personas:</h2>
+                <h3 class="mb-4">Cantidad de personas: $cantidadP</h3>
+                <ul class="person-list">
+                    #foreach($persona in $resultado)
+                        <li class="person-item">$persona</li>
+                    #end
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

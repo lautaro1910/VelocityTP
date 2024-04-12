@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convertidor de Temperaturas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Convertidor de Temperaturas</h2>
+        <form method="get">
+            <div class="form-group mt-4">
+                <label for="valor">Ingrese el valor:</label>
+                <input type="text" class="form-control" id="valor" name="valor">
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <button class="btn btn-primary btn-lg btn-block" formaction="/getFaC">Convertir Fahrenheit a Celsius</button>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <button class="btn btn-primary btn-lg btn-block" formaction="/getFaK">Convertir Fahrenheit a Kelvin</button>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <button class="btn btn-primary btn-lg btn-block" formaction="/getCaF">Convertir Celsius a Fahrenheit</button>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <button class="btn btn-primary btn-lg btn-block" formaction="/getCaK">Convertir Celsius a Kelvin</button>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <button class="btn btn-primary btn-lg btn-block" formaction="/getKaF">Convertir Kelvin a Fahrenheit</button>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <button class="btn btn-primary btn-lg btn-block" formaction="/getKaC">Convertir Kelvin a Celsius</button>
+                </div>
+            </div>
+        </form>
+        <div class="container mt-5">
+            <h2>El resultado de la conversión de $accion del $valor es:</h2>
+            <p>Resultado: $resultado</p>
+        </div>
+        <a href="/getInfo" class="btn btn-info mt-3">Volver al menú principal</a>
+    </div>
+</body>
+</html>
